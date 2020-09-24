@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="8" total="9" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3488" started-at="2020-09-01T17:31:33 IST" finished-at="2020-09-01T17:31:36 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="3488" started-at="2020-09-01T17:31:33 IST" finished-at="2020-09-01T17:31:36 IST">
+      <class name="com.studentAppli.tests.BestBuyStoresRestAssured">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.studentAppli.tests.BestBuyStoresRestAssured@305fd85d]" name="initialize" is-config="true" duration-ms="2382" started-at="2020-09-01T17:31:33 IST" finished-at="2020-09-01T17:31:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="test07()[pri:0, instance:com.studentAppli.tests.BestBuyStoresRestAssured@305fd85d]" name="test07" duration-ms="1065" started-at="2020-09-01T17:31:35 IST" finished-at="2020-09-01T17:31:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test07 -->
+      </class> <!-- com.studentAppli.tests.BestBuyStoresRestAssured -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

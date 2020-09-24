@@ -1,0 +1,177 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=40908, tid=0x0000000000008658
+#
+# JRE version:  (8.0_144-b01) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.144-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002444000):  JavaThread "Unknown thread" [_thread_in_vm, id=34392, stack(0x0000000002340000,0x0000000002440000)]
+
+Stack: [0x0000000002340000,0x0000000002440000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002444000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=34392, stack(0x0000000002340000,0x0000000002440000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 75776K, used 1300K [0x000000076bd00000, 0x0000000771180000, 0x00000007c0000000)
+  eden space 65024K, 2% used [0x000000076bd00000,0x000000076be451f8,0x000000076fc80000)
+  from space 10752K, 0% used [0x0000000770700000,0x0000000770700000,0x0000000771180000)
+  to   space 10752K, 0% used [0x000000076fc80000,0x000000076fc80000,0x0000000770700000)
+ ParOldGen       total 173568K, used 0K [0x00000006c3600000, 0x00000006cdf80000, 0x000000076bd00000)
+  object space 173568K, 0% used [0x00000006c3600000,0x00000006c3600000,0x00000006cdf80000)
+ Metaspace       used 770K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011900000,0x00000000120f0000] byte_map_base: 0x000000000e2e5000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006b08d850
+ Begin Bits: [0x0000000012e40000, 0x0000000016d68000)
+ End Bits:   [0x0000000016d68000, 0x000000001ac90000)
+
+Polling page: 0x0000000000700000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002540000, 0x00000000027b0000, 0x0000000011540000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.031 loading class java/lang/Short
+Event: 0.031 loading class java/lang/Short done
+Event: 0.031 loading class java/lang/Integer
+Event: 0.031 loading class java/lang/Integer done
+Event: 0.031 loading class java/lang/Long
+Event: 0.031 loading class java/lang/Long done
+Event: 0.032 loading class java/lang/NullPointerException
+Event: 0.032 loading class java/lang/NullPointerException done
+Event: 0.032 loading class java/lang/ArithmeticException
+Event: 0.032 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff65cbb0000 - 0x00007ff65cbe7000 	C:\Program Files\Java\jdk1.8.0_144\bin\javaw.exe
+0x00007ffe72f40000 - 0x00007ffe73130000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffe72430000 - 0x00007ffe724e2000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffe70c80000 - 0x00007ffe70f23000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffe72660000 - 0x00007ffe72703000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffe724f0000 - 0x00007ffe7258e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffe720d0000 - 0x00007ffe72167000 	C:\Windows\System32\sechost.dll
+0x00007ffe71050000 - 0x00007ffe71170000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffe71170000 - 0x00007ffe71304000 	C:\Windows\System32\USER32.dll
+0x00007ffe6fed0000 - 0x00007ffe6fef1000 	C:\Windows\System32\win32u.dll
+0x00007ffe72710000 - 0x00007ffe72736000 	C:\Windows\System32\GDI32.dll
+0x00007ffe70780000 - 0x00007ffe70914000 	C:\Windows\System32\gdi32full.dll
+0x00007ffe70f30000 - 0x00007ffe70fce000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffe70680000 - 0x00007ffe7077a000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffe5b100000 - 0x00007ffe5b385000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.592_none_e6c0b1911312be02\COMCTL32.dll
+0x00007ffe72b60000 - 0x00007ffe72e96000 	C:\Windows\System32\combase.dll
+0x00007ffe70b50000 - 0x00007ffe70bd0000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffe71c10000 - 0x00007ffe71c3e000 	C:\Windows\System32\IMM32.DLL
+0x00007ffe32920000 - 0x00007ffe33021000 	C:\Program Files\McAfee\DLP\Agent\fcagpph64.dll
+0x00007ffe71310000 - 0x00007ffe719f5000 	C:\Windows\System32\SHELL32.dll
+0x00007ffe70980000 - 0x00007ffe709ca000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ffe71b50000 - 0x00007ffe71bf9000 	C:\Windows\System32\shcore.dll
+0x00007ffe6ff00000 - 0x00007ffe7067f000 	C:\Windows\System32\windows.storage.dll
+0x00007ffe6fe90000 - 0x00007ffe6feaf000 	C:\Windows\System32\profapi.dll
+0x00007ffe6fe20000 - 0x00007ffe6fe6a000 	C:\Windows\System32\powrprof.dll
+0x00007ffe6fe10000 - 0x00007ffe6fe20000 	C:\Windows\System32\UMPDC.dll
+0x00007ffe70ff0000 - 0x00007ffe71042000 	C:\Windows\System32\shlwapi.dll
+0x00007ffe6fe70000 - 0x00007ffe6fe81000 	C:\Windows\System32\kernel.appcore.dll
+0x00007ffe70fd0000 - 0x00007ffe70fe7000 	C:\Windows\System32\cryptsp.dll
+0x00007ffe721f0000 - 0x00007ffe72346000 	C:\Windows\System32\ole32.dll
+0x00007ffe72590000 - 0x00007ffe72654000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ffe58d50000 - 0x00007ffe58dd9000 	C:\Windows\SYSTEM32\WINSPOOL.DRV
+0x00007ffe70b20000 - 0x00007ffe70b46000 	C:\Windows\System32\bcrypt.dll
+0x00007ffe6ef40000 - 0x00007ffe6ef4a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffe68590000 - 0x00007ffe6867f000 	C:\Windows\SYSTEM32\PROPSYS.dll
+0x00007ffe6f2f0000 - 0x00007ffe6f32a000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ffe6fd00000 - 0x00007ffe6fd2f000 	C:\Windows\SYSTEM32\SspiCli.dll
+0x00007ffe6eca0000 - 0x00007ffe6ecd1000 	C:\Windows\SYSTEM32\ntmarta.dll
+0x00007ffe42b20000 - 0x00007ffe42bd2000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPApi.dll
+0x00007ffe70920000 - 0x00007ffe7097c000 	C:\Windows\System32\WINTRUST.dll
+0x00007ffe6feb0000 - 0x00007ffe6fec2000 	C:\Windows\System32\MSASN1.dll
+0x00007ffe709d0000 - 0x00007ffe70b19000 	C:\Windows\System32\CRYPT32.dll
+0x000000006cbf0000 - 0x000000006cbfc000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPThe.dll
+0x000000006c060000 - 0x000000006c132000 	C:\Program Files\Java\jdk1.8.0_144\jre\bin\msvcr100.dll
+0x000000006a870000 - 0x000000006b10d000 	C:\Program Files\Java\jdk1.8.0_144\jre\bin\server\jvm.dll
+0x00000000006f0000 - 0x00000000006f8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffe52c20000 - 0x00007ffe52c29000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffe72ae0000 - 0x00007ffe72b4f000 	C:\Windows\System32\WS2_32.dll
+0x00007ffe6a810000 - 0x00007ffe6a834000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffe6a7e0000 - 0x00007ffe6a80d000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x000000006c050000 - 0x000000006c05f000 	C:\Program Files\Java\jdk1.8.0_144\jre\bin\verify.dll
+0x000000006c020000 - 0x000000006c049000 	C:\Program Files\Java\jdk1.8.0_144\jre\bin\java.dll
+0x000000006c000000 - 0x000000006c016000 	C:\Program Files\Java\jdk1.8.0_144\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -ea -Dfile.encoding=Cp1252 
+java_command: org.testng.remote.RemoteTestNG -serport 59966 -protocol json -d D:\Users\asingh6766\eclipse-workspace\ApiAutoationLearning\test-output D:\Users\ASINGH~1\AppData\Local\Temp\testng-eclipse--1158139837\testng-customsuite.xml
+java_class_path (initial): D:\Users\asingh6766\eclipse\java-2019-09\eclipse\configuration\org.eclipse.osgi\488\0\.cp\lib\testng-remote.jar;D:\Users\asingh6766\eclipse-workspace\ApiAutoationLearning\target\test-classes;D:\Users\asingh6766\eclipse-workspace\ApiAutoationLearning\target\classes;D:\Users\asingh6766\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar;D:\Users\asingh6766\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;D:\Users\asingh6766\.m2\repository\io\rest-assured\rest-assured\4.3.0\rest-assured-4.3.0.jar;D:\Users\asingh6766\.m2\repository\org\codehaus\groovy\groovy\3.0.2\groovy-3.0.2.jar;D:\Users\asingh6766\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.2\groovy-xml-3.0.2.jar;D:\Users\asingh6766\.m2\repository\org\apache\httpcomponents\httpmime\4.5.3\httpmime-4.5.3.jar;D:\Users\asingh6766\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;D:\Users\asingh6766\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;D:\Users\asingh6766\.m2\repository\io\rest-assured\xml-path\4.3.0\xml-path-4.3.0.jar;D:\Users\asingh6766\.m2\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;D:\Users\asingh6766\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;D:\Users\asingh6766\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;D:\Users\asingh6766\.m2\repository\com\sun\xml\bind\jaxb-osgi\2.3.0.1\jaxb-osgi-2.3.0.1.jar;D:\Users\asingh6766\.m2\repository\org\apache\sling\org.apache.sling.javax.activation\0.1.0\org.apache.sling.javax.activation-0.1.0.jar;D:\Users\asingh6766\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;D:\Users\asingh6766\.m2\repository\org\testng\testng\7.1.0\testng-7.1.0.jar;D:\Users\asingh6766\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;D:\Users\asingh6766\.m2\repository\com\google\inject\guice\4.1.0\guice-4.1.0-no_aop.jar;D:\Users\asingh6766\.m2\repository\javax\injec
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_144
+PATH=C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\PuTTY\;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\apache-maven-3.6.2\bin;D:\Work_Soft\Gradle\gradle-6.1-bin\gradle-6.1\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;D:\Users\asingh6766\AppData\Roaming\npm;D:\Users\asingh6766\AppData\Roaming\npm\node_modules;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;D:\Users\asingh6766\scoop\shims;D:\Users\asingh6766\AppData\Local\Microsoft\WindowsApps;D:\Users\asingh6766\AppData\Local\Programs\Git\cmd;D:\Users\asingh6766\AppData\Local\Programs\Microsoft VS Code\bin;C:\Windows\system32;
+USERNAME=asingh6766
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 11, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.329)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 11, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16551892k(2562056k free), swap 16551892k(5720k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.144-b01) for windows-amd64 JRE (1.8.0_144-b01), built on Jul 21 2017 21:57:33 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Thu Aug 06 16:45:25 2020
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
